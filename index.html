@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app.css">
+    <title>Beer</title>
+</head>
+<body>
+<div class="page-body">
+    <div class="beers-header">
+        <h1 class="page-name">BEER!</h1>
+        <i class="fa fa-shopping-cart"></i>
+        <i class="fa fa-list-ul"></i>
+        <i class="fa fa-th"></i>
+
+    </div>
+    <div class="beers-main grid"></div>
+</div>
+
+<template id="beers-template">
+    <article class="beers-body">
+        <img src="https://raw.githubusercontent.com/TIY-LR-FEE-2015-June/assignments/master/2.1-beer-layout/bottle-1.png" alt="beer-image">
+        <p class="beer-name">{{nameDisplay}}</p>
+        <p class="beer-abv">ABV {{abv}}%</p>
+        <p class="beer-description">
+            {{ description }}
+        </p>
+        <button class="beer-button">
+            <i class="fa fa-plus-circle"> Add to Cart</i>
+        </button>
+    </article>
+</template>
+
+<script src="jquery/dist/jquery.min.js"></script>
+<script src="handlebars/handlebars.js"></script>
+<script src="beer-data.js"></script>
+<script src="app.js"></script>
+<!-- livereload snippet -->
+<script>document.write('<script src="http://'
+ + (location.host || 'localhost').split(':')[0]
+ + ':35729/livereload.js?snipver=1"><\/script>')
+</script>
+</body>
+</html>
+
+
