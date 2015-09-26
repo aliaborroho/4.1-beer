@@ -12,5 +12,154 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+body {
+    font-family: arial, sans-serif;
+}
+
+.page-body {
+    @include outer-container(1140px);
+    position: relative;
+    border: 3px solid #1E84C7;
+    margin-top: 68px;
+    margin-bottom: 68px;
+}
+.beers-header {
+    @include span-columns(10);
+    @include shift(1);
+    position: absolute;
+    height: 1em;
+}
+.page-name {
+    float: left;
+    color: #1D75BE;
+    font-weight: bold;
+    font-size: 30pt;
+    padding: 4px;
+}
+.fa {
+    float: right;
+    font-size: 30pt;
+    margin: 4px 4px 4px 25px;
+    color: #C3C3C3;
+}
+.fa-list-ul, .fa-th:hover {
+    cursor: pointer;
+}
+.beer-name {
+    font-size: 15pt;
+    color: #2189CA;
+}
+.beer-abv {
+    color: #C3C3C3;
+}
+.beer-button, .fa-plus-circle {
+    background-color: #2E91CE;
+    color: white;
+    font-size: 10pt;
+    font-weight: bold;
+    border: 0;
+    border-radius: 3px;
+}
+.fa-plus-circle {
+    float: left;
+}
+.beer-button:hover {
+    cursor: pointer;
+}
+
+.grid {
+    border-top: 3px solid #1E84C7;
+    margin: 3em 1em;
+    .beers-body {
+        @include span-columns(4);
+        @include omega();
+        width: 33.3%;
+        text-align: center;
+        padding: 1em 0;
+    }
+    img {
+        padding-bottom: 1em;
+    }
+    .beer-name {
+        padding-bottom: 1em;
+    }
+    .beer-abv {
+        padding-bottom: 1em;
+    }
+    .beer-description {
+        display: none;
+    }
+    .beer-button {
+        @include span-columns(3);
+        vertical-align: center;
+        text-align: center;
+        color: #2189CA;
+        font-weight: bold;
+        padding-bottom: 1em;
+        margin: 0 0 0 8.5em;
+        width: 135px;
+    }
+    .beer-button > i {
+        position: relative;
+        top: 4px;
+        right: 7px;
+    }
+}
+
+.list {
+    border-top: 3px solid #1E84C7;
+    margin: 3em 1em;
+    .beers-body {
+        @include span-columns(12);
+        @include omega();
+    }
+    img {
+        @include span-columns(2);
+        display: inline-block;
+        vertical-align: center;
+        width: 15%;
+        padding: 3em 0;
+    }
+    .beer-name {
+        @include span-columns(2);
+        display: inline-block;
+        vertical-align: center;
+        text-align: center;
+        width: 15%;
+        padding: 3em 0;
+    }
+    .beer-abv {
+        @include span-columns(2);
+        display: inline-block;
+        vertical-align: center;
+        text-align: center;
+        width: 15%;
+        padding: 3.75em 0;
+    }
+    .beer-description {
+        @include span-columns(2);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #328FCD;
+        text-align: center;
+        width: 25%;
+        padding: 3.75em 1.5em 0 0;
+    }
+    .beer-button {
+        @include span-columns(2);
+        display: inline-block;
+        vertical-align: center;
+        text-align: center;
+        width: 15%;
+        margin: 3.75em 0;
+    }
+    .beer-button > i {
+        position: relative;
+        right: 9px;
+        text-align: center;
+    }
+}
+
 
 // Your SASS Journey Starts Here
